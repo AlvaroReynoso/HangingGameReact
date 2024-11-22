@@ -6,16 +6,19 @@ import { useState } from 'react';
 //REPASAR TODO
 
 function App() {
+
+ const [word]=useState('COMPUTADORA');            //useState: a new change in a state, so useState behave about that change.
+ const [hiddenWord]=useState('_ '.repeat(word.length));
+
 const [attemps,setAttemps]=useState(0);
+const checkLetter=(letter:string)=>{
 
- const checkLetter=(letter:string)=>{
+  if(!word.includes(letter)){
+    setAttemps(Math.min(attemps+1,9))
+  }
 
-  console.log(letter);
-  setAttemps(Math.min(attemps+1,9))
  }
 
- const word='COMPUTADORA';
- const hiddenWord='_ '.repeat(word.length)
 
   return (
     <div className="App">
