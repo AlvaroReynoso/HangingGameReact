@@ -14,13 +14,16 @@ const [attemps,setAttemps]=useState(0);
   setAttemps(Math.min(attemps+1,9))
  }
 
+ const word='COMPUTADORA';
+ const hiddenWord='_ '.repeat(word.length)
+
   return (
     <div className="App">
 
     {/* images */}
     <HangImages imageNumber={attemps}/>
     {/* hide word */}
-    <h3>_ _ _ _ _ _ _ _ _ </h3>
+    <h3>{hiddenWord}</h3>
     {/* fail tries */}
     <h3>Tries: {attemps}</h3>
     {/* letter buttons */}
