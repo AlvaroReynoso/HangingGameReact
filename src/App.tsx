@@ -74,7 +74,7 @@ function App() {
       }
       {/* win message */}
       {(win) ?
-        <p className="winPar">You win!!!</p>
+        <p className="winPar">Congratulations, you win!</p>
         :''
       } 
       {/* letter buttons */}
