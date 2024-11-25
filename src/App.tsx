@@ -63,16 +63,15 @@ function App() {
 
       <h3>{hiddenWord}</h3>
 
-      {/* fail tries */}
       <h3>Tries: {attemps}</h3>
 
-      {/* Lose message */}
+      {/* win and lose message */}
       {
         (lose) ? 
         <p className="losePar">You lose, the word was: {word}</p>
         :""
       }
-      {/* win message */}
+    
       {(win) ?
         <p className="winPar">Congratulations, you win!</p>
         :''
